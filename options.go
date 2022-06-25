@@ -8,7 +8,7 @@ type Option struct {
 
 type Options func(*Option)
 
-var defaultOption *Option
+var defaultOption = &Option{}
 
 func NewOptions(options ...Options) *Option{
 	for _, opts := range options{
