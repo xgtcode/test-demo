@@ -1,5 +1,7 @@
 package test_demo
 
+import "fmt"
+
 type Option struct {
 	Name string
 }
@@ -19,4 +21,7 @@ func WithNameOption(name string) Options{
 	return func(opt *Option){
 		opt.Name = name
 	}
+}
+func PrintDefaultOption() {
+	fmt.Println(defaultOption)
 }
